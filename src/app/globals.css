@@ -10,3 +10,10 @@ body {
   position: absolute;
 }
 
+
+/* For Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+  

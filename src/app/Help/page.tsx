@@ -98,7 +98,7 @@ const Help = () => {
               </Link>
             </div>
             <div className="flex justify-start items-start absolute left-[122.13px] top-[72px] pl-[21.5px] pr-[21.34375px] py-[7.5px] rounded-[30px] group bg-white border hover:bg-black  hover:border-black border-neutral-200">
-            <Link href="Product">
+            <Link href="Cart">
               <p className="flex-grow-0 flex-shrink-0 text-base font-medium text-center text-black group-hover:text-white ">
                 SHOP NIKE
               </p>

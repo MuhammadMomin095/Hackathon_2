@@ -1,187 +1,93 @@
-"use client"
-
-import Link from 'next/link';
-import { useState } from 'react';
+import Link from "next/link";
+import { FaTwitter, FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import { IoLocationOutline } from "react-icons/io5";  // Import location icon
 
 
 const Footer = () => {
     return (
+      <div>
+        
+          <div className="mt-auto w-[1440px] h-[331px]">
 
-
-
-
-
-<footer className="footer w-[1440px] h-[331px]">
-  <div className="w-[1440px] h-[331px] absolute bg-[#111]">
-    <div className="w-[1440px] h-[331px] absolute left-0 top-0">
-      <div className="w-[1372px] h-[213px] absolute left-[34px] top-10">
-        <div className="w-[1029px] h-[213px] absolute left-0 top-0">
-          <div className="w-[245.25px] h-[169.63px] absolute left-1.5 top-0 overflow-hidden">
-            <div className="w-[245.25px] h-[166.63px] absolute left-0 top-0">
-              <p className="w-[68.62px] h-4 absolute left-0 top-2 text-[10px] text-left uppercase text-white">
-                Find A Store
-              </p>
-              <p className="w-[98.17px] h-4 absolute left-0 top-[43.66px] text-[10px] text-left uppercase text-white">
-                Become A Member
-              </p>
-              <p className="w-[98.18px] h-4 absolute left-0 top-[79.31px] text-[10px] text-left uppercase text-white">
-                Sign Up for Email
-              </p>
-              <p className="w-[93.47px] h-4 absolute left-0 top-[110.97px] text-[10px] text-center text-white">
-                Send Us Feedback
-              </p>
-              <p className="w-[104.4px] h-4 absolute left-0 top-[141.97px] text-[9px] text-left uppercase text-white">
-                Student Discounts
-              </p>
-            </div>
-          </div>
-          <div className="w-[245.25px] h-[213px] absolute left-[263.25px] top-0 overflow-hidden">
-            <div className="w-[245.25px] h-[210px] absolute left-0 top-0">
-              <p className="w-[51.64px] h-4 absolute left-0 top-1 text-[10px] text-left uppercase text-white">
-                Get Help
-              </p>
-              <p className="w-[68.23px] h-3.5 absolute left-0 top-[34px] text-[11px] text-left text-[#7e7e7e]">
-                Order Status
-              </p>
-              <p className="w-[43.54px] h-3.5 absolute left-0 top-[65px] text-xs text-left text-[#7e7e7e]">
-                Delivery
-              </p>
-              <p className="w-[42.23px] h-3.5 absolute left-0 top-24 text-xs text-left text-[#7e7e7e]">
-                Returns
-              </p>
-              <p className="w-[92.25px] h-3.5 absolute left-0 top-[127px] text-[11px] text-left text-[#7e7e7e]">
-                Payment Options
-              </p>
-              <p className="w-[180.93px] h-3.5 absolute left-0 top-[158px] text-[11px] text-left text-[#7e7e7e]">
-                Contact Us On Nike.com Inquiries
-              </p>
-              <p className="w-[176.95px] h-3.5 absolute left-0 top-[189px] text-[11px] text-left text-[#7e7e7e]">
-                Contact Us On All Other Inquiries
-              </p>
-            </div>
-          </div>
-          <div className="w-[245.25px] h-[151px] absolute left-[520.5px] top-0 overflow-hidden">
-            <div className="w-[245.25px] h-[148px] absolute left-0 top-0">
-              <p className="w-[64.29px] h-4 absolute left-0 top-1 text-[10px] text-left uppercase text-white">
-                About Nike
-              </p>
-              <p className="w-[30.22px] h-3.5 absolute left-0 top-[34px] text-xs text-left text-[#7e7e7e]">
-                News
-              </p>
-              <p className="w-[42.89px] h-3.5 absolute left-0 top-[65px] text-xs text-left text-[#7e7e7e]">
-                Careers
-              </p>
-              <p className="w-[48.89px] h-3.5 absolute left-0 top-24 text-[11px] text-left text-[#7e7e7e]">
-                Investors
-              </p>
-              <p className="w-[70.92px] h-3.5 absolute left-0 top-[127px] text-[11px] text-left text-[#7e7e7e]">
-                Sustainability
-              </p>
-            </div>
-          </div>
-        </div>
-        <svg
-          width={337}
-          height={38}
-          viewBox="0 0 337 38"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[337px] h-[37px] absolute left-[1029px] top-0"
-          preserveAspectRatio="none"
-        >
-          <g clipPath="url(#clip0_1_279)">
-            <path
-              d="M184 0.359375C181.266 0.359375 178.75 1.02562 176.45 2.35938C174.182 3.66057 172.301 5.54153 171 7.80937C169.666 10.1094 169 12.6256 169 15.3594C169 18.0931 169.666 20.6094 171 22.9094C172.301 25.1772 174.182 27.0582 176.45 28.3594C178.75 29.6931 181.266 30.3594 184 30.3594C186.734 30.3594 189.25 29.6931 191.55 28.3594C193.818 27.0582 195.699 25.1772 197 22.9094C198.334 20.6094 199 18.0931 199 15.3594C199 12.6256 198.334 10.1094 197 7.80937C195.699 5.54153 193.818 3.66057 191.55 2.35938C189.25 1.02562 186.734 0.359375 184 0.359375ZM191.5 11.9594V12.4594C191.5 14.1931 191.084 15.8594 190.25 17.4594C189.428 19.0472 188.204 20.3919 186.7 21.3594C185.034 22.4256 183.166 22.9594 181.1 22.9594C179.087 22.9745 177.111 22.4198 175.4 21.3594H176.3C178.034 21.3594 179.566 20.8256 180.9 19.7594C180.1 19.7594 179.384 19.5094 178.75 19.0094C178.116 18.5094 177.666 17.8594 177.4 17.0594L178.1 17.2594C178.566 17.2594 178.9 17.1931 179.1 17.0594C178.249 16.9353 177.479 16.4875 176.95 15.8094C176.398 15.1508 176.097 14.3185 176.1 13.4594C176.634 13.7931 177.2 13.9594 177.8 13.9594C176.666 13.2931 176.1 12.2594 176.1 10.8594C176.1 10.1931 176.266 9.55937 176.6 8.95938C177.6 10.1594 178.75 11.0931 180.05 11.7594C181.37 12.4312 182.82 12.8066 184.3 12.8594C184.166 12.6594 184.1 12.3594 184.1 11.9594C184.1 10.9594 184.466 10.0931 185.2 9.35938C185.934 8.62562 186.8 8.25938 187.8 8.25938C188.8 8.25938 189.734 8.62562 190.6 9.35938C191.2 9.22563 192 8.92562 193 8.45938C192.734 9.39312 192.2 10.0594 191.4 10.4594H191.5C192.434 10.2594 193.1 10.0594 193.5 9.85938C192.834 10.7256 192.166 11.4256 191.5 11.9594Z"
-              fill="#7E7E7E"
-            />
-          </g>
-          <g clipPath="url(#clip1_1_279)">
-            <path
-              d="M230 0.359375C227.266 0.359375 224.75 1.02562 222.45 2.35938C220.182 3.66057 218.301 5.54153 217 7.80937C215.666 10.1094 215 12.6256 215 15.3594C215 18.0931 215.666 20.6094 217 22.9094C218.301 25.1772 220.182 27.0582 222.45 28.3594C224.75 29.6931 227.266 30.3594 230 30.3594C232.734 30.3594 235.25 29.6931 237.55 28.3594C239.818 27.0582 241.699 25.1772 243 22.9094C244.334 20.6094 245 18.0931 245 15.3594C245 12.6256 244.334 10.1094 243 7.80937C241.699 5.54153 239.818 3.66057 237.55 2.35938C235.25 1.02562 232.734 0.359375 230 0.359375ZM233.9 15.3594H231.4V24.3594H228V15.3594H225.8V12.2594H228V10.3594C228 8.95938 228.234 7.95937 228.7 7.35938C229.234 6.62562 230.2 6.25937 231.6 6.25937H234.1V9.35938H232.6C232.066 9.35938 231.734 9.44312 231.6 9.60938C231.466 9.77563 231.4 10.0931 231.4 10.5594V12.0594H234.1L233.9 15.3594Z"
-              fill="#7E7E7E"
-            />
-          </g>
-          <g clipPath="url(#clip2_1_279)">
-            <path
-              d="M275.1 22.3594C275.044 22.4796 274.958 22.583 274.85 22.6594C274.762 22.722 274.658 22.7569 274.55 22.7594C274.45 22.7594 274.384 22.7256 274.35 22.6594C274.311 22.5643 274.294 22.4618 274.3 22.3594V18.6594H273.4V22.7594C273.39 22.9856 273.442 23.2103 273.55 23.4094C273.65 23.5756 273.8 23.6594 274 23.6594C274.2 23.6594 274.384 23.5931 274.55 23.4594C274.716 23.3256 274.9 23.1594 275.1 22.9594V23.5594H276V18.6594H275.1V22.3594ZM269.7 17.8594V16.8594H273V17.8594H271.9V23.5594H270.8V17.8594H269.7ZM275.9 11.9594C275.766 11.9594 275.65 11.9094 275.55 11.8094C275.502 11.7644 275.465 11.7101 275.439 11.6499C275.413 11.5897 275.4 11.5249 275.4 11.4594V8.45938C275.4 8.39312 275.434 8.32563 275.5 8.25938C275.566 8.19313 275.684 8.15937 275.85 8.15937C276.016 8.15937 276.15 8.19313 276.25 8.25938C276.299 8.29197 276.339 8.3368 276.365 8.38942C276.391 8.44205 276.403 8.50063 276.4 8.55937V11.4594C276.4 11.5931 276.35 11.7094 276.25 11.8094C276.205 11.8569 276.151 11.8948 276.091 11.9206C276.03 11.9464 275.965 11.9596 275.9 11.9594ZM278.4 22.3594C278.4 21.5594 278.434 20.7256 278.5 19.8594C278.5 19.7256 278.45 19.6094 278.35 19.5094C278.25 19.4094 278.15 19.3594 278.05 19.3594H277.9L277.6 19.5594V22.5594L277.9 22.7594L278.1 22.8594C278.234 22.8594 278.316 22.8256 278.35 22.7594C278.384 22.6931 278.4 22.5594 278.4 22.3594ZM278.5 18.5594C278.766 18.5594 278.984 18.6594 279.15 18.8594C279.316 19.0594 279.4 19.3594 279.4 19.7594V22.5594C279.4 22.8931 279.334 23.1594 279.2 23.3594C279.145 23.4524 279.063 23.5262 278.964 23.5709C278.866 23.6156 278.756 23.6291 278.65 23.6094C278.445 23.5832 278.243 23.5328 278.05 23.4594C277.9 23.407 277.775 23.2998 277.7 23.1594V23.5594H276.7V16.8594H277.7V19.0594C277.834 18.9256 277.966 18.8094 278.1 18.7094C278.213 18.6167 278.354 18.564 278.5 18.5594ZM283.4 24.9594C283.734 24.6931 283.934 23.8256 284 22.3594C284.066 21.6256 284.134 20.9256 284.2 20.2594C284.2 19.6594 284.134 18.9931 284 18.2594C283.866 16.7931 283.65 15.8931 283.35 15.5594C283.05 15.2256 281.766 14.9931 279.5 14.8594L276.2 14.7594L272.8 14.8594C270.534 14.9931 269.25 15.2256 268.95 15.5594C268.65 15.8931 268.434 16.7931 268.3 18.2594C268.233 18.924 268.2 19.5915 268.2 20.2594C268.2 20.9256 268.234 21.6256 268.3 22.3594C268.434 23.8256 268.65 24.7094 268.95 25.0094C269.25 25.3094 270.534 25.5594 272.8 25.7594L276.2 25.8594L279.5 25.7594C281.766 25.5594 283.066 25.3256 283.4 25.0594V24.9594ZM271.5 5.35938H270.3L271.7 9.85938V12.6594H272.9V9.65938L274.3 5.35938H273.1L272.4 8.25938H272.3L271.5 5.35938ZM274.4 8.55937V11.3594C274.4 11.8256 274.534 12.1931 274.8 12.4594C275.066 12.7256 275.434 12.8594 275.9 12.8594C276.366 12.8594 276.734 12.7256 277 12.4594C277.266 12.1931 277.4 11.8256 277.4 11.3594V8.55937C277.4 8.15937 277.266 7.82563 277 7.55938C276.734 7.29313 276.366 7.15938 275.9 7.15938C275.434 7.15938 275.066 7.29313 274.8 7.55938C274.534 7.82563 274.4 8.15937 274.4 8.55937ZM278.3 7.35938V11.8594C278.29 12.0856 278.342 12.3103 278.45 12.5094C278.55 12.6756 278.716 12.7594 278.95 12.7594C279.184 12.7594 279.4 12.7094 279.6 12.6094C279.8 12.5094 280 12.3594 280.2 12.1594V12.7594H281.3V7.35938H280.2V11.3594C280.136 11.4899 280.031 11.5955 279.9 11.6594C279.792 11.719 279.673 11.7532 279.55 11.7594C279.45 11.7594 279.384 11.7431 279.35 11.7094C279.316 11.6756 279.3 11.5931 279.3 11.4594V7.25938H278.3V7.35938ZM276 0.359375C278.734 0.359375 281.25 1.02562 283.55 2.35938C285.818 3.66057 287.699 5.54153 289 7.80937C290.334 10.1094 291 12.6256 291 15.3594C291 18.0931 290.334 20.6094 289 22.9094C287.699 25.1772 285.818 27.0582 283.55 28.3594C281.25 29.6931 278.734 30.3594 276 30.3594C273.266 30.3594 270.75 29.6931 268.45 28.3594C266.182 27.0582 264.301 25.1772 263 22.9094C261.666 20.6094 261 18.0931 261 15.3594C261 12.6256 261.666 10.1094 263 7.80937C264.301 5.54153 266.182 3.66057 268.45 2.35938C270.75 1.02562 273.266 0.359375 276 0.359375ZM281.7 20.4594L281.6 19.9594C281.6 19.7594 281.566 19.6094 281.5 19.5094C281.467 19.4604 281.423 19.4208 281.37 19.3945C281.317 19.3682 281.259 19.3561 281.2 19.3594C281.141 19.3561 281.083 19.3682 281.03 19.3945C280.977 19.4208 280.933 19.4604 280.9 19.5094C280.834 19.6094 280.8 19.7594 280.8 19.9594V20.4594H281.7ZM281.3 18.5594C281.7 18.5594 282.016 18.6756 282.25 18.9094C282.484 19.1431 282.6 19.4931 282.6 19.9594V21.1594H280.8V22.1594C280.8 22.3594 280.834 22.5094 280.9 22.6094C280.966 22.7094 281.084 22.7594 281.25 22.7594C281.416 22.7594 281.534 22.7094 281.6 22.6094C281.666 22.5094 281.7 22.3256 281.7 22.0594V21.8594H282.6V22.1594C282.6 22.6256 282.484 22.9931 282.25 23.2594C282.016 23.5256 281.684 23.6594 281.25 23.6594C280.816 23.6594 280.484 23.5256 280.25 23.2594C280.016 22.9931 279.9 22.6256 279.9 22.1594V19.9594C279.9 19.5594 280.034 19.2256 280.3 18.9594C280.566 18.6931 280.9 18.5594 281.3 18.5594Z"
-              fill="#7E7E7E"
-            />
-          </g>
-          <g clipPath="url(#clip3_1_279)">
-            <path
-              d="M327 15.9594C326.872 16.611 326.636 17.2365 326.3 17.8094C325.968 18.3746 325.526 18.8676 325 19.2594C324.305 19.7793 323.468 20.0757 322.6 20.1094C321.743 20.1451 320.893 19.937 320.15 19.5094C319.392 19.0852 318.781 18.4398 318.4 17.6594C317.8 16.4594 317.666 15.1931 318 13.8594H316.6L316.7 20.7594C316.7 20.8931 316.75 21.0256 316.85 21.1594C316.95 21.2931 317.066 21.3594 317.2 21.3594H327.6C327.734 21.3594 327.866 21.2931 328 21.1594C328.134 21.0256 328.2 20.8931 328.2 20.7594V13.8594H326.8C327 14.5256 327.066 15.2256 327 15.9594ZM322.4 18.4594C323.2 18.4594 323.9 18.1594 324.5 17.5594C325.1 16.9594 325.4 16.2431 325.4 15.4094C325.407 14.5946 325.103 13.8077 324.55 13.2094C323.984 12.5756 323.284 12.2594 322.45 12.2594C321.616 12.2594 320.9 12.5594 320.3 13.1594C319.7 13.7594 319.4 14.4756 319.4 15.3094C319.4 16.1431 319.684 16.8756 320.25 17.5094C320.816 18.1431 321.5 18.4594 322.3 18.4594H322.4ZM327.6 8.95938H326.2C326.066 8.95938 325.934 9.02563 325.8 9.15938C325.666 9.29313 325.6 9.42562 325.6 9.55937V11.2594C325.734 11.5256 325.934 11.6594 326.2 11.6594H327.6C327.8 11.6594 327.95 11.5931 328.05 11.4594C328.143 11.3462 328.195 11.2056 328.2 11.0594V9.55937C328.2 9.42562 328.134 9.29313 328 9.15938C327.866 9.02563 327.734 8.95938 327.6 8.95938ZM322 0.359375C319.266 0.359375 316.75 1.02562 314.45 2.35938C312.182 3.66057 310.301 5.54153 309 7.80937C307.666 10.1094 307 12.6256 307 15.3594C307 18.0931 307.666 20.6094 309 22.9094C310.301 25.1772 312.182 27.0582 314.45 28.3594C316.75 29.6931 319.266 30.3594 322 30.3594C324.734 30.3594 327.25 29.6931 329.55 28.3594C331.818 27.0582 333.699 25.1772 335 22.9094C336.334 20.6094 337 18.0931 337 15.3594C337 12.6256 336.334 10.1094 335 7.80937C333.699 5.54153 331.818 3.66057 329.55 2.35938C327.25 1.02562 324.734 0.359375 322 0.359375ZM329.8 21.4594L329.7 21.5594V21.6594C329.703 21.8174 329.673 21.9744 329.613 22.1206C329.553 22.2668 329.463 22.3991 329.35 22.5094C329.119 22.7417 328.822 22.8986 328.5 22.9594H316.4C316.237 22.9604 316.077 22.925 315.93 22.8558C315.783 22.7866 315.653 22.6853 315.55 22.5594C315.323 22.3047 315.167 21.994 315.1 21.6594L315 21.4594L315.1 9.15938C315.1 8.82563 315.216 8.52563 315.45 8.25938C315.684 7.99313 315.966 7.82562 316.3 7.75938H328.4C328.722 7.82017 329.019 7.97704 329.25 8.20938C329.482 8.44081 329.639 8.73713 329.7 9.05937L329.8 21.4594Z"
-              fill="#7E7E7E"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_1_279">
-              <rect width={30} height={30} fill="white" transform="translate(169 0.359375)" />
-            </clipPath>
-            <clipPath id="clip1_1_279">
-              <rect width={30} height={30} fill="white" transform="translate(215 0.359375)" />
-            </clipPath>
-            <clipPath id="clip2_1_279">
-              <rect width={30} height={30} fill="white" transform="translate(261 0.359375)" />
-            </clipPath>
-            <clipPath id="clip3_1_279">
-              <rect width={30} height={30} fill="white" transform="translate(307 0.359375)" />
-            </clipPath>
-          </defs>
-        </svg>
+<div className="left-0 ">
+<div className="bg-black absolute left-0  w-[1440px] h-[331px]">
+<div className="flex justify-between  items-center flex-wrap gap-10" >
+  <div className="mt-12 ml-10 ">
+<div className="flex justify-start   gap-10 flex-wrap" >
+          {/* Column 1 */}
+          <div className="left-12">
+        <h3 className="text-sm font-semibold hover:text-white text-[#757575] mb-4">FIND A STORE</h3>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="Product" className="hover:underline hover:text-white text-[#757575]">Become Link Member</Link></li>
+          <li><Link href="mominshykh7@gmail.com" className="hover:underline hover:text-white text-[#757575]">Sign Up for Email</Link></li>
+          <li><Link href="" className="hover:underline hover:text-white text-[#757575]">Send us Feedback</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Student Discounts</Link></li>
+        </ul>
       </div>
-      <div className="w-[1372px] h-[62px] absolute left-[34px] top-[269px]">
-        <div className="w-[672px] h-8 absolute left-2 top-3">
-          <div className="flex justify-start items-end absolute left-0 top-[17px] gap-2 pr-[8.03125px]">
-            <svg
-              width={18}
-              height={16}
-              viewBox="0 0 18 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="flex-grow-0 flex-shrink-0 w-[18px] h-[15px] relative"
-              preserveAspectRatio="none"
-            >
-              <g clipPath="url(#clip0_1_295)">
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4.3125 5.98486C4.3125 4.74166 4.80636 3.54938 5.68544 2.6703C6.56451 1.79122 7.7568 1.29736 9 1.29736C10.2432 1.29736 11.4355 1.79122 12.3146 2.6703C13.1936 3.54938 13.6875 4.74166 13.6875 5.98486C13.6875 6.73799 13.4469 7.59486 13.1038 8.43986C12.7569 9.29236 12.29 10.1692 11.8038 10.9742C11.36 11.7079 10.8787 12.4182 10.3619 13.1024C9.93187 13.668 9.53938 14.1224 9.2925 14.3192C9.20944 14.3856 9.1063 14.4217 9 14.4217C8.8937 14.4217 8.79056 14.3856 8.7075 14.3192C8.46062 14.1224 8.06813 13.668 7.63812 13.1024C7.12146 12.4182 6.64041 11.7079 6.19687 10.9742C5.70937 10.1692 5.24312 9.29236 4.89687 8.43924C4.55312 7.59486 4.3125 6.73799 4.3125 5.98486ZM9 8.01549C9.53872 8.01549 10.0554 7.80148 10.4363 7.42055C10.8172 7.03962 11.0312 6.52296 11.0312 5.98424C11.0312 5.44552 10.8172 4.92886 10.4363 4.54793C10.0554 4.16699 9.53872 3.95299 9 3.95299C8.46128 3.95299 7.94462 4.16699 7.56369 4.54793C7.18276 4.92886 6.96875 5.44552 6.96875 5.98424C6.96875 6.52296 7.18276 7.03962 7.56369 7.42055C7.94462 7.80148 8.46128 8.01549 9 8.01549Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_1_295">
-                  <rect width={18} height={15} fill="white" transform="translate(0 0.359375)" />
-                </clipPath>
-              </defs>
-            </svg>
-            <p className="flex-grow-0 flex-shrink-0 text-xs text-left text-white">India</p>
-          </div>
-          <p className="w-[200.48px] h-3.5 absolute left-[76.03px] top-[19px] text-[11px] text-left text-[#7e7e7e]">
-            © 2023 Nike, Inc. All Rights Reserved
-          </p>
+
+      {/* Column 2 */}
+      <div className="left-12">
+        <h3 className="text-sm font-semibold hover:text-white text-[#757575] mb-4">GET HELP</h3>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Order Status</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Delivery</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Returns</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Payment Options</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Contact Us on Nike.com</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Contact Us on All Other Inquiries</Link></li>
+        </ul>
+      </div>
+
+      {/* Column 3 */}
+      <div className="left-12">
+        <h3 className="text-sm font-semibold mb-4 hover:text-white text-[#757575]">ABOUT NIKE</h3>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">News</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Careers</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Investors</Link></li>
+          <li><Link href="#" className="hover:underline hover:text-white text-[#757575]">Sustainability</Link></li>
+        </ul>
+      </div>
+      <div className="ml-[1230px] -mt-60 ">
+      <div className="flex justify-start lg:justify-end items-start gap-4 ">
+        <FaTwitter className="text-lg top-0 cursor-pointer hover:text-gray-400" />
+        <FaFacebook className="text-lg top-0 cursor-pointer hover:text-gray-400" />
+        <FaYoutube className="text-lg  top-0 cursor-pointer hover:text-gray-400" />
+        <FaInstagram className="text-lg top-0 cursor-pointer hover:text-gray-400" />
+      </div>
+      </div>
+</div>
+
+      {/* Column 4 (Social Media Icons) */}
+      
+</div>
+</div>
+
+
+      {/* Bottom Section */}
+      <div className="w-[1350px] -mt-6 ml-10 ">
+      <div className="mt-8 flex flex-wrap justify-between items-center text-xs text-gray-400">
+        {/* Country and Copyright */}
+        <div className="flex mb-4 md:mb-0 gap-2">
+          <IoLocationOutline className='' />
+          <p className="hover:text-white text-[#757575]">India</p>
+          <p className="hover:text-white text-[#757575]">© 2023 Nike, Inc. All Rights Reserved</p>
         </div>
-        <div className="w-[680px] h-[46px] absolute left-[686px] top-4">
-          <p className="w-[38.23px] h-3.5 absolute left-[303.89px] top-[17px] text-xs text-center text-[#7e7e7e]">
-            Guides
-          </p>
-          <p className="w-[73.56px] h-3.5 absolute left-[369.92px] top-[17px] text-xs text-right text-[#7e7e7e]">
-            Terms of Sale
-          </p>
-          <p className="w-[70.89px] h-3.5 absolute left-[471.28px] top-[17px] text-xs text-right text-[#7e7e7e]">
-            Terms of Use
-          </p>
-          <p className="w-[102.23px] h-3.5 absolute left-[569.97px] top-[17px] text-[11px] text-right text-[#7e7e7e]">
-            Nike Privacy Policy
-          </p>
+
+        {/* Links */}
+        <div className="flex flex-wrap left-[600px] ">
+          <Link href="#" className="hover:underline hover:text-white text-[#757575]">Guides</Link>
+          <Link href="#" className="hover:underline hover:text-white text-[#757575]">Terms of Sale</Link>
+          <Link href="#" className="hover:underline  hover:text-white text-[#757575]">Terms of Use</Link>
+          <Link href="#" className="hover:underline hover:text-white text-[#757575]">Nike Privacy Policy</Link>
+        </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-
-
-     
+    </div>
+    </div>
+    </div>
+    
 );
 };
 

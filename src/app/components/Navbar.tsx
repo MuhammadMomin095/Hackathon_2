@@ -33,7 +33,7 @@ const Navbar = () => {
 
       <div className="w-[760px] h-[60px] absolute">
   <div className="w-[760px] h-[60px] absolute left-[340px] top-1 overflow-hidden">
-  <Link href="/">
+  <Link href="Featured">
 
     <p className="w-[120.76px] h-6 absolute left-[154.53px] top-3.5 text-base text-center text-[#111]">
       New &amp; Featured
@@ -41,7 +41,7 @@ const Navbar = () => {
     </Link>
 
 
-  <Link href="/Product">
+  <Link href="Stock">
 
 
     <p className="w-[32.51px] h-6 absolute left-[299.09px] top-3.5 text-base text-center text-[#111]">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
 
-  <Link href="/">
+  <Link href="Feed">
 
     <p className="w-[56.75px] h-6 absolute left-[355.41px] top-3.5 text-base text-center text-[#111]">
       Women
@@ -62,7 +62,7 @@ const Navbar = () => {
 
 
 
-  <Link href="/">
+  <Link href="Upcoming">
 
     <p className="w-[33.48px] h-6 absolute left-[435.95px] top-3.5 text-base text-center text-[#111]">
       Kids
@@ -72,7 +72,7 @@ const Navbar = () => {
 
 
 
-  <Link href="/">
+  <Link href="Stock">
 
     <p className="w-[33.25px] h-6 absolute left-[493.23px] top-3.5 text-base text-center text-[#111]">
       Sale
@@ -320,7 +320,7 @@ const Navbar = () => {
 
 
 
-            <Link href="Product">
+            <Link href="Featured">
             <p className="flex-grow-0 flex-shrink-0 text-[11px] font-medium text-left text-[#111]">
               Find a Store
             </p></Link>

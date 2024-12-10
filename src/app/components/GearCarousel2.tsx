@@ -1,4 +1,3 @@
-"use client"
 import * as React from "react"
 
 import Image from "next/image"
@@ -12,38 +11,31 @@ import {
 } from "@/components/ui/carousel"
 
 import Link from "next/link"
-import { airMax } from "@/data/detail"
 
-export function CarouselSize() {
+import {  gear2 } from "@/data/detail"
+
+export function GearCarousel2() {
   return (
-    <div  >
-      <div className=" absolute top-[1119px]  left-12">
-       <p className="top-[1119px] text-[23px] font-semibold text-left text-[#111]">
-        Best of Air Max </p>
-        </div>
-        
-      
     <Carousel
       opts={{
         align: "start",
       }}
-     
-      className="w-[1344px] h-[540.36px] left-12 mt-12"
+      className="w-[666px] h-[509px] left-[685px] top-[3000px] absolute"
     >
       <CarouselContent>
-        {airMax.map((item) => (
+        {gear2.map((item) => (
           
-          <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={item.id} className=" lg:basis-1/2 w-[666px] h-[509px]">
             <Link href={""}>
             <div className="p-1">
               <Card>
-                <CardContent className="w-[441.36px] h-[441.36px] bg-[#F5F5F5] aspect-square group ">
-                <Image src={item.img} alt={"shoes"} width={440} height={440}/>
+                <CardContent className=" bg-[#F5F5F5] aspect-square group ">
+                 <Image src={item.img} alt={"shoes"} width={440} height={440}/>
                 </CardContent>
                 
               </Card>
-            </div         >
-                <div className=" flex justify-between mx-2 mt-2 ">
+            </div>
+                <div className=" flex justify-between mx-2 mt-2">
                   <h1 className="font-semibold text-sm">{item.title}</h1>
                     <h2 className="font-semibold text-sm">{item.price}</h2>
                 </div>
@@ -53,16 +45,11 @@ export function CarouselSize() {
         ))}
         
       </CarouselContent>
-      <div className="absolute  bottom-[390px] right-14 md:bottom-[450px] md:right-14 lg:bottom-[400px] xl:bottom-[500px]">
+      <div className="absolute bottom-[390px] w-[300px] h-[393px] left-12  md:bottom-[430px] md:right-14 right-14  lg:bottom-[310px] xl:bottom-[380px]">
       <CarouselPrevious />
       <CarouselNext />
       </div>
    
     </Carousel>
-    </div>
-   
-
   )
 }
-
-export default CarouselSize;
