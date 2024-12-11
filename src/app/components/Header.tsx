@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <section className="flex flex-col items-center bg-[#fafafa] m-4">
+    <div className="flex px-4 sm:px-8 lg:px-12 flex-col bg-[#fafafa]">
       {/* Header Section */}
-      <div className="flex flex-col items-center pb-4 text-center">
+      <div className="flex max-w-screen-xl mx-auto flex-col items-center pb-4 text-center">
         <h3 className="text-lg sm:text-xl lg:text-2xl text-black font-bold">
           Hello Nike App
         </h3>
@@ -20,7 +20,7 @@ const Header = () => {
       </div>
 
       {/* Image Section */}
-      <div className="w-full max-w-[1344px]">
+      <div className="w-full relative">
         <img
           src="1.png"
           alt="shoes"
@@ -42,18 +42,26 @@ const Header = () => {
         {/* Buttons Section */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
           <div className="group hover:border-black">
+            <Link href="Stock">
             <Button className="border border-neutral-200 hover:bg-black bg-white text-black group-hover:text-white px-6 py-3">
               Notify Me
             </Button>
+            </Link>
           </div>
+         
+         
+
           <div className="group hover:border-black">
+          <Link href="Featured">
             <Button className="border border-neutral-200 hover:bg-black bg-white text-black group-hover:text-white px-6 py-3">
               Shop Air Max
             </Button>
+            </Link>
           </div>
+         
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -6,23 +6,13 @@ import Essential from './components/Essential';
 import Feature from './components/Feature';
 import Miss from './components/Miss';
 import Gear from './components/Gear';
-
-
-
-import Link from 'next/link';
-import { FaTwitter, FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
-import { IoLocationOutline } from "react-icons/io5";  
-
-
-
-
-
+import Footer from './components/Footer';
 
 
 
 export default function Home() {
   return (
-  <div>  
+  <div className="flex flex-col min-h-screen">  
   
 
       <Navbar />
@@ -33,6 +23,8 @@ export default function Home() {
       <Miss />
       <Essential />
       <Icon />
+      <Footer />
+
     
 
      

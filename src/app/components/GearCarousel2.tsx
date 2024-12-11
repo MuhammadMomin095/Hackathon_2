@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/cards"
 import {
@@ -9,47 +8,44 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
 import Link from "next/link"
-
-import {  gear2 } from "@/data/detail"
+import { gear2 } from "@/data/detail"
 
 export function GearCarousel2() {
   return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-[666px] h-[509px] left-[685px] top-[3000px] absolute"
-    >
-      <CarouselContent>
-        {gear2.map((item) => (
-          
-          <CarouselItem key={item.id} className=" lg:basis-1/2 w-[666px] h-[509px]">
-            <Link href={""}>
-            <div className="p-1">
-              <Card>
-                <CardContent className=" bg-[#F5F5F5] aspect-square group ">
-                 <Image src={item.img} alt={"shoes"} width={440} height={440}/>
-                </CardContent>
-                
-              </Card>
-            </div>
-                <div className=" flex justify-between mx-2 mt-2">
+    <div className="w-full flex justify-center md:justify-start">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="w-full h-[509px] overflow-hidden"
+      >
+        <CarouselContent>
+          {gear2.map((item) => (
+            <CarouselItem key={item.id} className="lg:basis-1/2 md:basis-1/2 w-full ">
+              <Link href={""}>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="bg-[#F5F5F5] aspect-square group">
+                      <Image src={item.img} alt={"shoes"} width={440} height={440} />
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="flex justify-between mx-2 mt-2">
                   <h1 className="font-semibold text-sm">{item.title}</h1>
-                    <h2 className="font-semibold text-sm">{item.price}</h2>
+                  <h2 className="font-semibold text-sm">{item.price}</h2>
                 </div>
                 <h3 className="ml-2 text-sm">{item.title2}</h3>
-                </Link>
-          </CarouselItem>
-        ))}
-        
-      </CarouselContent>
-      <div className="absolute bottom-[390px] w-[300px] h-[393px] left-12  md:bottom-[430px] md:right-14 right-14  lg:bottom-[310px] xl:bottom-[380px]">
-      <CarouselPrevious />
-      <CarouselNext />
-      </div>
+              </Link>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
    
-    </Carousel>
+      <div className="absolute bottom-[390px] w-[300px] h-[393px] left-12 md:bottom-[430px] md:right-14 right-14 lg:bottom-[310px] xl:bottom-[380px]">
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
+      </Carousel>
+    </div>
   )
 }
