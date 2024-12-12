@@ -1,75 +1,81 @@
-"use client"
+"use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-
-
+import { Input } from "@/components/ui/input";
 
 const Login = () => {
     return (
+        <div className=" w-full ">
+            <Navbar />
 
-
-      <main className='bg-white'>
-         <Navbar />
-
-         <section className="my-20">
-                <div className="flex flex-col justify-center items-center max-w-lg mx-auto">
-                <img
-                    src={"image(1).png"}
-                    alt="Nike Logo"
-                    width={100} height={35}
-                    />
-                    <div className=" items-center justify-center flex flex-col">
-                        <h1 className="font-bold text-xl ">YOUR ACCOUNT</h1>
-                        <h1 className="font-bold text-xl ">FOR EVERYTHING </h1>
-                        <h1 className="font-bold text-xl ">NIKE</h1>
-                    </div>
-                    <div className="flex flex-col justify-center items-center gap-4 mt-3">
-                        <Input type="Email" placeholder="Email" className="w-80" />
-                        <Input type="password" placeholder="password" className="w-80" />
-                    </div>
-                        
-                    <div className="flex justify-between max-w-lg mx-auto mt-6 gap-x-10 md:gap-x-16">
-                        <h1 className="text-[#BCBCBC] text-[12px] flex gap-1 cursor-pointer hover:text-black items-center"><input type="checkbox" />Keep me signed In</h1>
-                        <p className="text-[#BCBCBC] cursor-pointer hover:text-black text-[12px]"   >Forgotten your password?</p>
-                    </div>
-                    <div className="flex flex-col justify-center items-center mt-4">
-                        <p className="text-[#BCBCBC] cursor-pointer hover:text-black  text-[12px]">By logging in, you agree to Nike&apos;s <u>Privacy Policy</u></p>
-                        <p className="text-[#BCBCBC] cursor-pointer hover:text-black text-[12px]">and <u>Terms of Use</u></p>
+            {/* Login Section */}
+            <section className="flex-grow flex justify-center items-center py-4 px-4">
+                <div className="bg-white p-6 shadow-lg rounded-lg max-w-md w-full sm:p-8 md:p-10">
+                    {/* Logo */}
+                    <div className="flex justify-center mb-6">
+                        <img
+                            src={"image(1).png"}
+                            alt="Nike Logo"
+                            width={100}
+                            height={35}
+                            className="mb-4"
+                        />
                     </div>
 
-
-                    <div className="group w-[324px] h-10 relative rounded-[3px] mt-4 bg-white border hover:bg-black  hover:border-black border-neutral-200">
-                   <Link href="/">
-                     <button className="w-[41.04px] h-[18px] absolute left-[141.58px] top-[10.5px] text-[11px] text-center  text-black group-hover:text-white">
-                    Login
-                     </button>
-                  </Link>
+                    {/* Title */}
+                    <div className="text-center mb-6">
+                        <h1 className="font-bold text-xl sm:text-2xl">YOUR ACCOUNT</h1>
+                        <h1 className="font-bold text-xl sm:text-2xl">FOR EVERYTHING</h1>
+                        <h1 className="font-bold text-xl sm:text-2xl">NIKE</h1>
                     </div>
-                
-                   
-                    <p className="mt-2 text-[#BCBCBC] cursor-pointer hover:text-black text-[12px]">Not a Member <u className="hover:text-blue-800 text-black"><Link href={"Join"}>Join us?</Link></u></p>
 
-                   
+                    {/* Input Fields */}
+                    <div className="flex flex-col gap-4">
+                        <Input type="email" placeholder="Email" className="w-full" />
+                        <Input type="password" placeholder="Password" className="w-full" />
+                    </div>
+
+                    {/* Options */}
+                    <div className="flex justify-between items-center w-full mt-4 text-sm text-gray-600">
+                        <label className="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" /> Keep me signed in
+                        </label>
+                        <p className="cursor-pointer hover:text-gray-900">Forgot password?</p>
+                    </div>
+
+                    {/* Policy */}
+                    <div className="text-center text-sm text-gray-600 mt-4">
+                        <p>
+                            By logging in, you agree to Nike&apos;s{" "}
+                            <u className="cursor-pointer">Privacy Policy</u>
+                        </p>
+                        <p>
+                            and <u className="cursor-pointer">Terms of Use</u>
+                        </p>
+                    </div>
+
+                    {/* Login Button */}
+                    <Link href="/">
+                        <button className="mt-6 w-full h-10 border bg-white text-black rounded hover:text-white hover:bg-black transition duration-200">
+                            Login
+                        </button>
+                    </Link>
+
+                    {/* Join Us */}
+                    <p className="mt-4 text-sm text-center text-gray-600">
+                        Not a Member?{" "}
+                        <Link href="/Join">
+                            <u className="text-black hover:text-blue-700">Join us?</u>
+                        </Link>
+                    </p>
                 </div>
-                
             </section>
 
-
-
-         <Footer />
-        
-
-         </main>
-
-
-
-        );
+            <Footer />
+        </div>
+    );
 };
 
 export default Login;

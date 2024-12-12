@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import 'font-awesome/css/font-awesome.min.css';
+
 
 const Navbar: React.FC = () => {
   // State for toggling menu on mobile view
@@ -103,8 +105,10 @@ const Navbar: React.FC = () => {
           {/* Heart Icon */}
           <div className="cursor-pointer text-lg">&#10084;</div>
 
-          {/* Cart Icon */}
-          <div className="cursor-pointer text-lg">&#128722;</div>
+          {/* Bag Icon */}
+          <div className="cursor-pointer text-lg">
+          <i className="fa fa-shopping-bag"></i>
+          </div>
         </div>
 
         {/* Hamburger Menu for Mobile */}
