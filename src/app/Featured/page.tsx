@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 export default function Featured() {
   return (
     
-    <div className="w-[1440px]">
+    <div>
     
     
 
@@ -18,13 +18,8 @@ export default function Featured() {
 
     
    
-     <div className="w-full left-12 h-[1300.72px]">
-     <div className="absolute w-full left-12">
-      
-<div className=" flex-grow absolute left-12 w-full ">
-
-    <div className="my-20 mx-auto w-full flex gap-x-4  lg:gap-x-20">
-      <section className="flex flex-col left-12 max-w-[200px]">
+<div className="px-4 sm:px-8 lg:px-12">
+    <section className="flex flex-col left-12 mt-16 max-w-[200px]">
         <h1 className="font-semibold text-sm text-left  md:text-2xl">New(500)</h1>
         <div className="font-medium text-[15px] lg:text-md max-w-[150px] hover:text-black space-y-2 mt-6 flex flex-col">
           <Link href={"Stock"}>Shoes</Link>
@@ -109,15 +104,25 @@ export default function Featured() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1000px] mx-auto overflow-clip">
+
+
+
+  
+   
+
+
+
+
+
+      <section className="max-w-full -mt-[870px] ml-40  mx-auto overflow-clip">
         <div className="flex gap-4 ml-10 md:ml-[400px] lg:ml-[620px] xl:ml-[800px] overflow-clip">
-          <h1 className="flex items-center gap-2 font-semibold text-sm">
+          <h1 className="flex items-center gap-2  mt-16 font-semibold text-sm">
             Hide Filters
             <span>
               <FiFilter size={14} />
             </span>
           </h1>
-          <h2 className="flex items-center gap-2 font-semibold text-sm">
+          <h2 className="flex items-center gap-2 mt-16 font-semibold text-sm">
             Sort By
             <span>
               <RiArrowDropDownLine size={25} />
@@ -129,130 +134,131 @@ export default function Featured() {
         </div>
         
         </section>
-        </div>
+
+
        
        
        
-        
-   
-        <section className="-mt-52 w-full">
-          <div className="mt-72 w-full">
-          <div className=" w-full ml-56 mt-12">
-          
-  <div className="space-y-4 w-full">
-    <h1 className="font-semibold ml-2 text-xl">Related Categories</h1>
+ 
+
+
+
+
+
+
+<section className=" w-full py-16">
+  <div className="-mt-6 w-full">
+    <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 mt-12">
     
-    {/* Flex container for buttons */}
-    <div className="flex flex-wrap  gap-2">
-      
-      {/* First Row Buttons */}
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full shadow-none text-black group-hover:text-white">
-            Best Selling Products
-          </Button>
-        </Link>
-      </div>
+      <div className="space-y-4 w-full">
+        <h1 className="font-semibold ml-2 text-xl">Related Categories</h1>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white shadow-none">
-            Best Shoes
-          </Button>
-        </Link>
-      </div>
+        {/* Flex container for buttons */}
+        <div className="flex flex-wrap gap-2">
+          
+          {/* First Row Buttons */}
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full shadow-none text-black border-[1px]  group-hover:text-white">
+                Best Selling Products
+              </Button>
+            </Link>
+          </div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white shadow-none">
-            New Basketball Shoes
-          </Button>
-        </Link>
-      </div>
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px]  shadow-none">
+                Best Shoes
+              </Button>
+            </Link>
+          </div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white shadow-none">
-            New Football Shoes
-          </Button>
-        </Link>
-      </div>
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px]  shadow-none">
+                New Basketball Shoes
+              </Button>
+            </Link>
+          </div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white shadow-none">
-            New Men's Shoes
-          </Button>
-        </Link>
-      </div>
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px]  shadow-none">
+                New Football Shoes
+              </Button>
+            </Link>
+          </div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white shadow-none">
-            New Running Shoes
-          </Button>
-        </Link>
-      </div>
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px]  shadow-none">
+                New Men's Shoes
+              </Button>
+            </Link>
+          </div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
-            Best Men's Shoes
-          </Button>
-        </Link>
-      </div>
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px]  shadow-none">
+                New Running Shoes
+              </Button>
+            </Link>
+          </div>
 
-      {/* Force a new row for the last three buttons */}
-      <div className="w-full"></div> 
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
+                Best Men's Shoes
+              </Button>
+            </Link>
+          </div>
 
-      {/* Last Row Buttons */}
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
-            New Jordan Shoes
-          </Button>
-        </Link>
-      </div>
+          {/* Force a new row for the last three buttons */}
+          <div className="w-full"></div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
-            Best Women's Shoes
-          </Button>
-        </Link>
-      </div>
+          {/* Last Row Buttons */}
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
+                New Jordan Shoes
+              </Button>
+            </Link>
+          </div>
 
-      <div className="group hover:border-black border-neutral-200">
-        <Link href="Stock">
-          <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
-            Best Training & Gym
-          </Button>
-        </Link>
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
+                Best Women's Shoes
+              </Button>
+            </Link>
+          </div>
+
+          <div className="group hover:border-black border-neutral-200 w-full sm:w-auto">
+            <Link href="Stock">
+              <Button className="bg-white hover:bg-black rounded-full text-black group-hover:text-white border-[1px] shadow-none">
+                Best Training & Gym
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-  </div>
+</section>
+</div>
+ 
 
-
-
-        </section>
-        </div>
-        </div>
-        </div>
-        
 
 
 
 
    
     
-<section className="mt-[680px] ">
 
         
     <Footer />
 
-    </section>
+   
 
 
     
