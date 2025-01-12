@@ -2,14 +2,26 @@ import Link from "next/link";
 import { IoIosArrowUp } from "react-icons/io";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FiFilter } from "react-icons/fi";
-import { FeaturedCarousel } from "@/components/ProductItem";
+import ProductItem  from "@/components/ProductItem";
 import { Button } from "@/components/ui/button";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Checkbox } from "@/components/ui/checkbox"
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { feature } from "../data/detail";
+
+
 export default function Featured() {
   return (
     
-    <div>
+    <div className="min-h-screen flex flex-col">
     
     
 
@@ -19,91 +31,91 @@ export default function Featured() {
     
    
 <div className="px-4 sm:px-8 lg:px-12">
-    <section className="flex flex-col left-12 mt-16 max-w-[200px]">
-        <h1 className="font-semibold text-sm text-left  md:text-2xl">New(500)</h1>
-        <div className="font-medium text-[15px] lg:text-md max-w-[150px] hover:text-black space-y-2 mt-6 flex flex-col">
-          <Link href={"Stock"}>Shoes</Link>
-          <Link href={"Stock"}>Sports Bras</Link>
-          <Link href={"Stock"}>Tops & T-Shirts</Link>
-          <Link href={"Stock"}>Hoodies & Sweatshirts</Link>
-          <Link href={"Stock"}>Jackets</Link>
-          <Link href={"Stock"}>Trousers & Tights</Link>
-          <Link href={"Stock"}>Shorts</Link>
-          <Link href={"Stock"}>Tracksuits</Link>
-          <Link href={"Stock"}>Jumpsuits & Rompers</Link>
-          <Link href={"Stock"}>Skirts & Dresses</Link>
-          <Link href={"Stock"}>Socks</Link>
-          <Link href={"Stock"}>Accessories & Equipment</Link>
-        </div>
-        <div className="mt-10">
-          <hr />
-          <h1 className="font-semibold flex justify-between items-center text-sm mt-1">
-            Gender
-            <span>
-              <IoIosArrowUp />
-            </span>
-          </h1>
-          <div className="mt-2 text-[9px] lg:text-sm">
-          <Link href='Stock'>
-            <h1 className="flex gap-2 items-center">
-              
-              Men
-            </h1>
-            </Link>
-            <Link href='Stock'>
-            <h1 className="flex gap-2 items-center">
-             
-              Women
-            </h1>
-            </Link>
-            <Link href='Stock'>
-            <h1 className="flex gap-2 items-center">
-             
-              Unisex
-            </h1>
-            </Link>
+<main className="flex-grow">
+        <div className="container mx-auto px-4 py-8">
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 space-y-4 sm:space-y-0">
+            <h1 className="text-xl font-semibold">New (500)</h1>
+            <div className="flex items-center gap-4">
+              <Button variant="outline" className="text-sm">
+                <FiFilter className="mr-2" />
+                Filters
+              </Button>
+              <Select>
+                <SelectTrigger className="w-[120px]">
+                  <SelectValue placeholder="Sort By" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="price-low">Price: Low to High</SelectItem>
+                  <SelectItem value="price-high">Price: High to Low</SelectItem>
+                  <SelectItem value="newest">Newest</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Sidebar Filters */}
+            <div className="w-full md:w-64 space-y-8">
+              {/* Categories */}
+              <div className="space-y-4">
+                <h3 className="font-semibold">Categories</h3>
+                <div className="space-y-2">
+                  {['Shoes', 'Sports Bras', 'Tops & T-Shirts', 'Hoodies & Sweatshirts', 'Jackets', 'Trousers & Tights', 'Shorts', 'Tracksuits'].map((category) => (
+                    <div key={category} className="flex items-center space-x-2">
+                      <Checkbox id={category} />
+                      <label htmlFor={category} className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        {category}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Gender Filter */}
+              <div className="space-y-4">
+                <h3 className="font-semibold">Gender</h3>
+                <div className="space-y-2">
+                  {['Men', 'Women', 'Unisex'].map((gender) => (
+                    <div key={gender} className="flex items-center space-x-2">
+                      <Checkbox id={gender} />
+                      <label htmlFor={gender} className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        {gender}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Price Filter */}
+              <div className="space-y-4">
+                <h3 className="font-semibold">Shop By Price</h3>
+                <div className="space-y-2">
+                  {['Under ₹ 2,500.00', '₹ 2,501.00 - ₹ 7,500.00', 'Over ₹ 7,500.00'].map((price) => (
+                    <div key={price} className="flex items-center space-x-2">
+                      <Checkbox id={price} />
+                      <label htmlFor={price} className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        {price}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Product Grid */}
+            <div className="flex-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {feature.map((product) => (
+                  <ProductItem key={product.id} product={product} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-        <div className="mt-10">
-          <hr />
-          <h1 className="font-semibold flex justify-between text-sm items-center mt-1">
-            Kids
-            <span>
-              <IoIosArrowUp />
-            </span>
-          </h1>
-          <div className="mt-2 text-[9px] lg:text-sm">
-            <Link href='Stock'>
-            <h1 className="flex gap-2 items-center">          
-              Boys
-            </h1>
-            </Link>
-            <Link href='Stock'>
-            <h1 className="flex gap-2 items-center">           
-              Girls
-            </h1>
-            </Link>
-          </div>
-        </div>
-        <div className="mt-10">
-          <hr />
-          <h1 className="font-semibold flex text-[9px] lg:text-[12px] justify-between items-center mt-1">
-            Sort By Price
-            <span>
-              <IoIosArrowUp />
-            </span>
-          </h1>
-          <div className="mt-2 text-[9px] lg:text-sm">
-            <h1 className="flex gap-2 items-center">
-           
-              Under ₹ 2 500.00
-            </h1>
-            <h1 className="flex gap-2 items-center">
-             ₹ 2 501.00 - ₹ 7 500.00
-            </h1>
-          </div>
-        </div>
-      </section>
+      </main>
+
+
 
 
 
@@ -114,26 +126,7 @@ export default function Featured() {
 
 
 
-      <section className="max-w-full -mt-[870px] ml-40  mx-auto overflow-clip">
-        <div className="flex gap-4 ml-10 md:ml-[400px] lg:ml-[620px] xl:ml-[800px] overflow-clip">
-          <h1 className="flex items-center gap-2  mt-16 font-semibold text-sm">
-            Hide Filters
-            <span>
-              <FiFilter size={14} />
-            </span>
-          </h1>
-          <h2 className="flex items-center gap-2 mt-16 font-semibold text-sm">
-            Sort By
-            <span>
-              <RiArrowDropDownLine size={25} />
-            </span>
-          </h2>
-        </div>
-        <div className="mb-20 ">
-          <FeaturedCarousel />
-        </div>
-        
-        </section>
+  
 
 
        

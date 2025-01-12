@@ -1,5 +1,5 @@
 
-interface Items {
+export interface Items {
   id:number
   img: string
   title:string
