@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Input } from "@/components/ui/input";
+import { Divide } from 'lucide-react';
 
 const Login = () => {
     return (
@@ -58,9 +59,9 @@ const Login = () => {
 
                     {/* Login Button */}
                     <Link href="/">
-                        <button className="mt-6 w-full h-10 border bg-white text-black rounded hover:text-white hover:bg-black transition duration-200">
+                        <div className="mt-6 w-full text-center flex justify-center items-center h-10 border bg-white text-black rounded hover:text-white hover:bg-black transition duration-200">
                             Login
-                        </button>
+                        </div>
                     </Link>
 
                     {/* Join Us */}

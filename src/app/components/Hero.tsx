@@ -1,4 +1,3 @@
-"use client"
 import * as React from "react"
 
 import Image from "next/image"
@@ -8,11 +7,15 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
-
 import Link from "next/link"
 import { airMax } from "@/data/detail"
+import { client } from "@/sanity/lib/client"
+import { urlFor } from "@/sanity/lib/client";
 
-export function CarouselSize() {
+
+export default async function CarouselSize() {
+  const data = await client.fetch(`*[_type == "product"]`);
+    console.log(data);
   return (
     <div className="py-16">
     <div className="px-4 sm:px-8 lg:px-12 ">
@@ -35,23 +38,30 @@ export function CarouselSize() {
         className="w-full sm:w-[70%] lg:w-[95%] mx-auto mt-12"
       >
         <CarouselContent>
-          {airMax.map((item) => (
-            <CarouselItem key={item.id} className="sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/3">
+        {data.map((product: any, index: number) => (
+          <div
+          key={index}>
+            <CarouselItem key={product.id} className="sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/3">
               <Link href={""}>
                 <div className="p-2">
                   <Card>
-                    <CardContent className="w-full h-full bg-[#F5F5F5] aspect-square group">
-                      <Image src={item.img} alt="shoes" width={440} height={440} />
+                    <CardContent className="w-full h-96 bg-[#F5F5F5] aspect-square group">
+                      <img 
+                      src={urlFor(product.image).url()} 
+                      alt="shoes" 
+                      className="w-full h-full"
+                      />
                     </CardContent>
                   </Card>
                 </div>
                 <div className="flex justify-between mx-2 mt-2">
-                  <h1 className="font-semibold text-sm md:text-base">{item.title}</h1>
-                  <h2 className="font-semibold text-sm md:text-base">{item.price}</h2>
+                  <h1 className="font-semibold text-sm md:text-base">{product.name}</h1>
+                  <h2 className="font-semibold text-sm md:text-base">{product.price}</h2>
                 </div>
-                <h3 className="ml-2 text-xs md:text-sm">{item.title2}</h3>
+                <h3 className="ml-2 text-xs md:text-sm">{product.priceWithoutDiscount}</h3>
               </Link>
             </CarouselItem>
+            </div>
           ))}
         </CarouselContent>
 
@@ -67,4 +77,4 @@ export function CarouselSize() {
   )
 }
 
-export default CarouselSize;
+

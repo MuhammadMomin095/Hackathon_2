@@ -2,11 +2,20 @@
 
 import React, { useState } from "react";
 import 'font-awesome/css/font-awesome.min.css';
+import Link from "next/link";
 
 
 const Navbar: React.FC = () => {
   // State for toggling menu on mobile view
   const [menuOpen, setMenuOpen] = useState(false);
+
+
+  const [cartItems, setCartItems] = useState(0); // Cart ki count rakhta hai
+
+  // Ye function "Add to Cart" button ke liye hai
+  const addToCart = () => {
+    setCartItems(cartItems + 1);
+  };
 
   return (
     <div>
@@ -15,9 +24,9 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div>
           <img 
-            src="Frame (1).png" 
+            src="/100.png" 
             alt="Logo"
-            className="h-8 w-auto ml-8"  // Adjust the size of the logo here
+            className=""  // Adjust the size of the logo here
           />
         </div>
 
@@ -106,9 +115,12 @@ const Navbar: React.FC = () => {
           <div className="cursor-pointer text-lg">&#10084;</div>
 
           {/* Bag Icon */}
-          <div className="cursor-pointer text-lg">
+          <Link href="/Cart">
+          <div className="cursor-pointer text-lg">           
           <i className="fa fa-shopping-bag"></i>
+          {cartItems > 0 && <span className="cart-count">{cartItems}</span>}
           </div>
+          </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}
