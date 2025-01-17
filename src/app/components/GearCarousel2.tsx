@@ -36,6 +36,8 @@ export function GearCarousel2() {
                   <h2 className="font-semibold text-sm">{item.price}</h2>
                 </div>
                 <h3 className="ml-2 text-sm">{item.title2}</h3>
+                <div className="ml-2 text-sm md:text-base">Stock:{item.inventry}</div>
+                <div className="ml-2 text-sm md:text-base">color:{item.colors}</div>
               </Link>
             </CarouselItem>
           ))}

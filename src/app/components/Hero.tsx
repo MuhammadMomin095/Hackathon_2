@@ -55,10 +55,13 @@ export default async function CarouselSize() {
                   </Card>
                 </div>
                 <div className="flex justify-between mx-2 mt-2">
-                  <h1 className="font-semibold text-sm md:text-base">{product.name}</h1>
-                  <h2 className="font-semibold text-sm md:text-base">{product.price}</h2>
+                  <h1 className="font-semibold text-sm md:text-base">{product.productName}</h1>
+                  <h2 className="font-semibold text-sm md:text-base">MRP: {product.price}</h2>
                 </div>
-                <h3 className="ml-2 text-xs md:text-sm">{product.priceWithoutDiscount}</h3>
+                <h3 className="ml-2 text-xs md:text-sm">{product.description}</h3>
+                <div className="font-semibold text-sm md:text-base">Stock:{product.inventory}</div>
+                <div className="font-semibold text-sm md:text-base">color:{product.colors}</div>
+
               </Link>
             </CarouselItem>
             </div>

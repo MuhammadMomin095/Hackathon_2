@@ -42,7 +42,8 @@ export default function ProductItem({ product }: ProductItemProps) {
               <h4 className="text-sm font-semibold text-[#9E3500]">Just In</h4>
               <h3 className="text-sm font-semibold">{product.title}</h3>
               <p className="text-sm text-gray-500">{product.title2}</p>
-              <p className="text-sm text-gray-500">1 Colour</p>
+              <p className="text-sm text-gray-500">Stock: {product.inventry}</p>
+              <p className="text-sm text-gray-500">{product.colors} Colour</p>
               <p className="text-sm font-medium">MRP: {product.price}</p>
             </div>
           </Link>
